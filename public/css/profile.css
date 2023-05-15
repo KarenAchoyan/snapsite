@@ -19,6 +19,7 @@
     background: transparent;
     color: #be5504;
 }
+
 .alert {
     padding: 4px 10px;
     font-size: 14px;
@@ -34,13 +35,113 @@
 }
 
 header {
-    background-color: #fff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #be5504;
+    /*box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);*/
     display: flex;
     justify-content: space-between;
-    padding: 10px 10%;
+   width: 100%;
+
+}
+.dokkle{
+    /*background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?cs=srgb&dl=pexels-felix-mittermeier-956999.jpg&fm=jpg");*/
+    display: flex;
+    background: #000;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    z-index: 9999;
+    height: 90px;
+    /*position: fixed;*/
+    /*z-index: 4;*/
+   /*background-attachment:fixed ;*/
+
+
+}
+.dokkle ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    /*padding-right: 30px;*/
+}
+.dokkle ul li{
+    color: #be5504;
+    font-size: 20px;
+    padding-right: 30px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    transition: 0.5s;
+}
+.dokkle ul li:hover{
+    cursor:pointer;
+    color: white;
+}
+.dokkle div img{
+    width: 100px;
+    animation: 1s animated1 infinite linear;
+
+
+    /*height: 50px;*/
+}
+
+.dokkle span, i:hover{
+    cursor:pointer;
+
+}
+.dokkle i:hover{
+    font-size: 45px;
+}
+
+.dokkle span:hover{
+
+
+}
+.dokkle i{
+    font-size: 35px;
+    /*margin-right: 20px;*/
+    padding-left: 20px;
+    transition: 0.5s;
+    color: #be5504;
+}
+
+.dokkle span{
+    /*margin-left: 20px;*/
+    color: #be5504;
+}
+.subm{
+
+    width: 150px;
+    /*height: 50px;*/
+    background: white;
+    margin-top: 100px;
+    /*margin-right: 50px;*/
+    position: absolute;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    /*display: block;*/
+
+    right: 250px;
+    top: -30px;
+    /*opacity: 0;*/
+    cursor: pointer;
+    transition: 0.5s;
+    display: none;
+
+}
+
+
+.subm ul{
+    list-style: none;
+}
+.subm ul li{
+    font-size: 20px;
+    transition: 0.5s;
+    font-family: sans-serif;
+    padding-top: 5px;
+}
+.subm ul li:hover{
+    border-bottom: 1px solid black;
 }
 
 nav ul {
@@ -59,12 +160,12 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    color: #555;
+    color: black;
     position: relative;
 }
 
 nav a:hover {
-    color: #000;
+    color: #fff;
 }
 
 .menu-toggle {
@@ -75,6 +176,7 @@ nav a:hover {
     width: 30px;
     height: 30px;
     cursor: pointer;
+
 }
 
 .dropdown-toggle {
@@ -105,6 +207,9 @@ nav a:hover {
     color: #555;
     font-size: 16px;
 }
+.dokkle i:hover + .subm{
+    display: block;
+}
 
 .dropdown-item:hover {
     background-color: #f6f6f6;
@@ -125,8 +230,9 @@ nav a:hover {
         top: 60px;
         left: -100%;
         background: #f2f2f2;
-        height: calc(100% - 60px);
-        width: 100
+        display: flex;
+        /*height: calc(100% / 3 - 60px);*/
+        /*width: 100;*/
     }
 
     nav.active {
@@ -174,4 +280,50 @@ body{
 }
 .form-setting img{
     margin-top: 15px;
+}
+
+i{
+    color: black;
+}
+.navigation-clo{
+    width: 300px;
+    height: 60px;
+    /*display: flex;*/
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navigation-clo span img{
+    width: 35%;
+    /*height: 100%;*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /*background: black;*/
+}
+@media (max-width: 1040px){
+    .navigation-clo{
+    width: 100px;
+
+    }
+    .navigation-clo span img{
+        width: 100%;
+    }
+}
+.dropdown{
+    width: 200px;
+}
+.dropdown li{
+    display: flex;
+    justify-content: flex-end;
+}
+@media (max-width: 702px){
+    .dokkle ul{
+       flex-wrap: wrap;
+        /*height: auto;*/
+    }
+
 }
